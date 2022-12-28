@@ -419,7 +419,18 @@ nav a{
 }
 
 .titulo-p{
+    width: 50%;
     color: white;
+}
+
+.titulo-p h3{
+    font-size: 2.5rem;
+}
+
+@media (min-width:768px) {
+    .titulo-p h3{
+        font-size: 4rem;
+    }
 }
 
 .barra{
@@ -450,11 +461,17 @@ nav a{
 
 .navegacion-principal{
     width: 100%;
-    flex: 0 0 calc(66.6% - 2rem);
+    flex: 0 calc(100% - 2rem);
     display: inline-block;
     text-align: right;
 }
 
+@media (min-width:768px) {
+    .navegacion-principal{
+        flex: 0 0 calc(66.6% - 2rem);
+    }
+    
+}
 
 .navegacion-principal a{ 
     font-family: 'Bebas Neue', cursive;
@@ -496,10 +513,16 @@ nav a{
 /*Iconos*/
 .iconos-perfil{
     display: grid;
-    grid-template-columns: Repeat(3, 1fr);
+    grid-template-columns: Repeat(1, 1fr);
     justify-content: space-between; 
     grid-column-gap: 2rem;
     grid-row-gap: 4rem;
+}
+
+@media (min-width:768px) {
+    .iconos-perfil{
+        grid-template-columns: Repeat(3, 1fr);
+    }
 }
 
 .icono{
@@ -527,9 +550,14 @@ nav a{
 
 .contenido-perfil{
     display: grid/*Grid es como flex*/;
-    grid-template-columns: Repeat(2, 1fr)/*Si le voy a asignar el mismo espacio a todo uso repeat(#deVecesRepetir, #EspacioAginado)*/;
-    /*contenido-perfil es el padre de 2 divs, entonces con grid-template-columns le doy a esos dos divs un cierto porcentaje de espacio de anchura para cada uno de los divs o (Le doy tantas fracciones[fr] del espacio total a cada columna, hay dos divs asi que si le doy 1 fr a cada una le doy la mitad del espacio total a ambas)*/
-    grid-column-gap: 2rem; /*Con grid puedo hacer la separacion de columnas con "grid-column-gap"*/
+    grid-template-columns: Repeat(1, 1fr);
+    grid-column-gap: 2rem;
+}
+
+@media (min-width:768px) {
+    .contenido-perfil{
+        grid-template-columns: Repeat(2, 1fr);
+    }
 }
 
 .texto-perfil h4{
