@@ -232,6 +232,13 @@ nav a{
     column-gap: 3rem;
 }
 
+.lista-proyectos-nypd{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5rem;
+    column-gap: 3rem;
+}
+
 .proyecto{
     position: relative;
 }
@@ -256,8 +263,8 @@ nav a{
 .proyecto img{
     max-width: 100%;
     filter: gray;
-    -webkit-filter: grayscale(1);
-    -webkit-transition: all .5s ease-in-out;
+    -webkit-filter: grayscale(0.7);
+    -webkit-transition: all .1s ease-in-out;
 }
 
 .proyecto img:hover{
